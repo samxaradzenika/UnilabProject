@@ -1,17 +1,97 @@
 form {
-   margin-left: 100px;
-   margin-top: 100px;
-   padding: 50px;
+   position: absolute;
+   top: 40px;
+   left: 389px;
+   width: 588px;
+   height: 688px;
+   /* UI Properties */
+   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+   background: #ffffff 0% 0% no-repeat padding-box;
+   border-radius: 4px;
+   opacity: 1;
    background-color: white;
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    border-radius: 4px;
+   background-color: white;
+}
+form h3 {
+   font-size: 48px;
+   width: 277px;
+   height: 67px;
+   color: var(--unnamed-color-000000);
+   text-align: center;
+   font: normal normal 600 48px/72px Poppins;
+   letter-spacing: 0px;
+   color: #000000;
+   text-transform: capitalize;
+   opacity: 1;
+}
+form h2 {
+   width: 136px;
+   height: 31px;
+   /* UI Properties */
+   color: var(--unnamed-color-000000);
+   text-align: center;
+   font: normal normal 300 22px/33px Poppins;
+   letter-spacing: 0px;
+   color: #000000;
+   text-transform: lowercase;
+   opacity: 1;
+   margin-top: 44px;
+   margin-bottom: 10px;
+}
+form h4 {
+   font: size 5px;
+   height: 31px;
+   /* UI Properties */
+   color: var(--unnamed-color-000000);
+   text-align: center;
+   font: normal normal 300 22px/33px Poppins;
+   letter-spacing: 0px;
+   color: #000000;
+   text-transform: lowercase;
+   opacity: 1;
+   margin-top: 53px;
+   margin-bottom: 16px;
 }
 .circle {
    width: 122px;
    height: 122px;
    border-radius: 50%;
    background-color: #e6ebff;
+   cursor: pointer;
+}
+.nameinput {
+   background: var(--unnamed-color-e6ebff) 0% 0% no-repeat padding-box;
+   background: #e6ebff 0% 0% no-repeat padding-box;
+   border-radius: 4px;
+   opacity: 1;
+   border: none;
+   width: 487px;
+   height: 76px;
+   border-radius: 4px;
+   margin-bottom: 76px;
+}
+.signinbtn {
+   background: var(--unnamed-color-5efc8d) 0% 0% no-repeat padding-box;
+   background: #5efc8d 0% 0% no-repeat padding-box;
+   border-radius: 4px;
+   opacity: 1;
+   background-color: #5efc8d;
+   width: 258px;
+   height: 66px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.signinbtn p {
+   font-size: 32px;
+   color: black;
+}
+input[type='text'] {
+   text-align: center;
+   font-size: 22px;
 }

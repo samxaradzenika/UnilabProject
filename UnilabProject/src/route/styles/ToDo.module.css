@@ -2,7 +2,7 @@ div {
    background-color: white;
 }
 h1 {
-   color: black;
+   color: rgb(145, 118, 118);
 }
 .list {
    display: flex;
@@ -13,7 +13,7 @@ h1 {
    max-width: 388px;
    width: 388px;
    height: 98px;
-   background-color: #000000;
+   background-color: #c15353;
    border-radius: 4px;
-   color: black;
+   color: rgb(232, 84, 84);
 }

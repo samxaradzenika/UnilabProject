@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './route/Home';
 import SignUp from './route/SignUp';
-import ToDo from './route/ToDo';
+import ToDo from './route/ToDoList';
 
 const App = () => {
    return (
