@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import classes from './styles/ToDo.module.css';
 import ToDoItem from './ToDoItem';
+import NavBar from '../components/navBar';
 
 const ToDoList = () => {
    const [task, setTask] = useState('');
    const [tasks, setTasks] = useState([]);
    const [taskId, setTaskId] = useState(0);
+   const location = useLocation();
+   const isToDoList = location.pathname === '/todo';
+   if (isToDoList) {
+      document.getElementsByTagName('body')[0].style.backgroundColor = 'white';
+      document.getElementsByTagName('body')[0].style.position = 'relative';
+      document.getElementsByTagName('body')[0].style.width = `100%`;
+      document.getElementsByTagName('body')[0].style.height = `100%`;
+   }
 
    const handleFormSubmit = (e) => {
       e.preventDefault();
@@ -17,11 +28,9 @@ const ToDoList = () => {
    };
 
    return (
-      <form onSubmit={handleFormSubmit}>
-         <nav>
-            <h1>TO DO</h1>
-            <p>Your Name</p>
-         </nav>
+      <form className={classes.form} onSubmit={handleFormSubmit}>
+         <NavBar />
+
          <h2>Add Your Daily Tasks</h2>
          <input
             type="text"
@@ -41,3 +50,4 @@ const ToDoList = () => {
 };
 
 export default ToDoList;
+
