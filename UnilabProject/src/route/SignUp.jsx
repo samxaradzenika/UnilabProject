@@ -35,6 +35,7 @@ const SignUp = () => {
       };
    }, []);
 
+   localStorage.setItem('name', nameInput);
    const clearLocalStorage = () => {
       if (!nameInput || !photoUploaded) {
          localStorage.clear();
@@ -43,12 +44,20 @@ const SignUp = () => {
          setPhotoUrl('');
       }
    };
+   const handleEnterKeyPress = (e) => {
+      if (e.key === 'Enter' && !isSubmitDisabled) {
+         e.preventDefault();
+         document.getElementById('signin-button').click();
+      }
+   };
 
-   localStorage.setItem('name', nameInput);
+   const handleSubmit = (e) => {
+      e.preventDefault();
+   };
 
    const isSubmitDisabled = !nameInput || !photoUploaded;
    return (
-      <form>
+      <form onSubmit={handleSubmit}>
          <h3>Get Started</h3>
          <h2>add a photo</h2>
          <div></div>
@@ -73,6 +82,7 @@ const SignUp = () => {
          <input
             onChange={handleNameInputChange}
             placeholder="your name"
+            onKeyPress={handleEnterKeyPress}
             type="text"
             name=""
             id=""
@@ -80,6 +90,7 @@ const SignUp = () => {
          />
          <Link
             to={isSubmitDisabled ? '#' : '/todo'}
+            id="signin-button"
             className={`${classes.signinbtn} ${
                isSubmitDisabled ? classes.disabled : ''
             }`}
