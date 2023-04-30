@@ -1,28 +1,80 @@
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+   h1 {
+      font-size: 32px;
+      max-width: 90%;
+      margin-top: 24px;
+      margin-bottom: 72px;
+   }
+
+   .sign {
+      font-size: 24px;
+      max-width: 90%;
+      width: 100%;
+      height: 56px;
+   }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+   h1 {
+      font-size: 48px;
+      max-width: 90%;
+      margin-top: 32px;
+      margin-bottom: 96px;
+   }
+
+   .sign {
+      font-size: 32px;
+      max-width: 90%;
+      width: 100%;
+      height: 72px;
+   }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1024px) {
+   h1 {
+      font-size: 54px;
+      max-width: 869px;
+      margin-top: 46px;
+      margin-bottom: 149px;
+   }
+
+   .sign {
+      font-size: 48px;
+      max-width: 388px;
+      width: 388px;
+      height: 98px;
+   }
+}
+
+/* Common Styles */
 div {
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
 }
-h1 {
+
+div h1 {
    color: white;
-   font-size: 54px;
-   max-width: 869px;
-   width: 869px;
-   height: 76px;
-   margin-top: 46px;
-   margin-bottom: 149px;
 }
+
 .sign {
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   font-size: 48px;
-   max-width: 388px;
-   width: 388px;
-   height: 98px;
    background-color: #5efc8d;
    border-radius: 4px;
    color: black;
+   text-align: center;
+   cursor: pointer;
+   text-decoration: none;
+   transition: all 0.3s ease;
+}
+
+.sign:hover {
+   background-color: #4ee377;
 }

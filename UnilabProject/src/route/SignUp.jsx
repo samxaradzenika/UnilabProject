@@ -1,23 +1,62 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './styles/SignUp.module.css';
 import Photo from '../../assets/pics/Camera.svg';
 
 const SignUp = () => {
+   const [photoUrl, setPhotoUrl] = useState(
+      localStorage.getItem('photo') || ''
+   );
+   const [nameInput, setNameInput] = useState('');
+   const [photoUploaded, setPhotoUploaded] = useState(false);
+
    const photoUploadHandler = (e) => {
-      console.log(e.target.value);
+      const file = e.target.files[0];
+      const reader = new FileReader();
+
+      reader.readAsDataURL(file);
+
+      reader.onload = () => {
+         const photoDataURL = reader.result;
+         localStorage.setItem('photo', photoDataURL);
+         setPhotoUploaded(true);
+         setPhotoUrl(photoDataURL);
+      };
    };
 
+   const handleNameInputChange = (e) => {
+      setNameInput(e.target.value);
+   };
+
+   useEffect(() => {
+      window.addEventListener('beforeunload', clearLocalStorage);
+      return () => {
+         window.removeEventListener('beforeunload', clearLocalStorage);
+      };
+   }, []);
+
+   const clearLocalStorage = () => {
+      if (!nameInput || !photoUploaded) {
+         localStorage.clear();
+         setNameInput('');
+         setPhotoUploaded(false);
+         setPhotoUrl('');
+      }
+   };
+
+   localStorage.setItem('name', nameInput);
+
+   const isSubmitDisabled = !nameInput || !photoUploaded;
    return (
       <form>
          <h3>Get Started</h3>
          <h2>add a photo</h2>
-
+         <div></div>
          <div className={classes.circle}>
             <label htmlFor="imgLabel">
                <img
                   style={{ cursor: 'pointer' }}
-                  src={Photo}
+                  src={photoUrl || Photo}
                   alt="upload_icon"
                />
             </label>
@@ -32,13 +71,20 @@ const SignUp = () => {
          </div>
          <h4>fill in your name</h4>
          <input
+            onChange={handleNameInputChange}
             placeholder="your name"
             type="text"
             name=""
             id=""
             className={classes.nameinput}
          />
-         <Link to="/todo" className={classes.signinbtn}>
+         <Link
+            to={isSubmitDisabled ? '#' : '/todo'}
+            className={`${classes.signinbtn} ${
+               isSubmitDisabled ? classes.disabled : ''
+            }`}
+            onClick={(e) => isSubmitDisabled && e.preventDefault()}
+         >
             <p>Sign In</p>
          </Link>
       </form>

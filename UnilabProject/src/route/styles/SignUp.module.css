@@ -1,10 +1,9 @@
-form {
+/* form {
    position: absolute;
    top: 40px;
    left: 389px;
    width: 588px;
    height: 688px;
-   /* UI Properties */
    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
    background: #ffffff 0% 0% no-repeat padding-box;
    border-radius: 4px;
@@ -32,7 +31,6 @@ form h3 {
 form h2 {
    width: 136px;
    height: 31px;
-   /* UI Properties */
    color: var(--unnamed-color-000000);
    text-align: center;
    font: normal normal 300 22px/33px Poppins;
@@ -46,7 +44,6 @@ form h2 {
 form h4 {
    font: size 5px;
    height: 31px;
-   /* UI Properties */
    color: var(--unnamed-color-000000);
    text-align: center;
    font: normal normal 300 22px/33px Poppins;
@@ -94,4 +91,135 @@ form h4 {
 input[type='text'] {
    text-align: center;
    font-size: 22px;
+} */
+form {
+   position: absolute;
+   top: 40px;
+   left: 50%;
+   transform: translate(-50%, 0);
+   width: 90%;
+   max-width: 588px;
+   height: 80vh;
+   background-color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   border-radius: 4px;
+}
+
+form h3 {
+   font-size: 2.5rem;
+   width: 80%;
+   max-width: 277px;
+   color: #000000;
+   text-align: center;
+   font-weight: 600;
+   text-transform: capitalize;
+   letter-spacing: 0px;
+   margin-top: 33px;
+   margin-bottom: 44px;
+}
+
+form h2 {
+   width: 80%;
+   max-width: 136px;
+   height: 31px;
+   color: #000000;
+   text-align: center;
+   font-weight: 300;
+   text-transform: lowercase;
+   letter-spacing: 0px;
+   margin-bottom: 10px;
+   font-size: 22px;
+}
+
+form h4 {
+   height: 31px;
+   color: #000000;
+   text-align: center;
+   font-weight: 300;
+   text-transform: lowercase;
+   letter-spacing: 0px;
+   margin-top: 53px;
+   margin-bottom: 16px;
+}
+
+.circle {
+   width: 122px;
+   height: 122px;
+   border-radius: 50%;
+   background-color: #e6ebff;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+.circle img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.nameinput {
+   background-color: #e6ebff;
+   border-radius: 4px;
+   border: none;
+   width: 80%;
+   max-width: 487px;
+   height: 10vh;
+   margin-bottom: 76px;
+   font-size: 2rem;
+   text-align: center;
+}
+
+.signinbtn {
+   background-color: #5efc8d;
+   border-radius: 4px;
+   width: 80%;
+   max-width: 258px;
+   height: 66px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 63px;
+}
+
+.signinbtn p {
+   font-size: 2.5rem;
+   color: black;
+}
+
+input[type='text'] {
+   text-align: center;
+   font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+   form {
+      height: 100%;
+      top: 0;
+      border-radius: 0;
+   }
+
+   form h3 {
+      font-size: 2rem;
+      margin-top: 3rem;
+   }
+
+   form h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+   }
+
+   form h4 {
+      margin-top: 3rem;
+   }
+   .nameinput {
+      font-size: 1.5rem;
+      height: 8vh;
+      margin-bottom: 3rem;
+   }
 }
