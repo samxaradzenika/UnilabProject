@@ -28,26 +28,26 @@ const ToDoList = () => {
    };
 
    return (
-      <form className={classes.form} onSubmit={handleFormSubmit}>
+      <React.Fragment>
          <NavBar />
-
-         <h2>Add Your Daily Tasks</h2>
-         <input
-            type="text"
-            value={task}
-            onChange={(e) => setTask(e.target.value)}
-         />
-         <button type="submit">Add</button>
-         <div className={classes.list}>
-            <ul>
-               {tasks.map((task) => (
-                  <ToDoItem key={task.id} text={task.text} />
-               ))}
-            </ul>
-         </div>
-      </form>
+         <form className={classes.form} onSubmit={handleFormSubmit}>
+            <h2>Add Your Daily Tasks</h2>
+            <input
+               type="text"
+               value={task}
+               onChange={(e) => setTask(e.target.value)}
+            />
+            <button type="submit">Add</button>
+            <div className={classes.list}>
+               <ul>
+                  {tasks.map((task) => (
+                     <ToDoItem key={task.id} text={task.text} />
+                  ))}
+               </ul>
+            </div>
+         </form>
+      </React.Fragment>
    );
 };
 
 export default ToDoList;
-

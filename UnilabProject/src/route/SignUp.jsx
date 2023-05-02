@@ -57,7 +57,7 @@ const SignUp = () => {
 
    const isSubmitDisabled = !nameInput || !photoUploaded;
    return (
-      <form onSubmit={handleSubmit}>
+      <form className={classes.form} onSubmit={handleSubmit}>
          <h3>Get Started</h3>
          <h2>add a photo</h2>
          <div></div>
