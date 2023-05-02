@@ -10,6 +10,7 @@ const SignUp = () => {
    const [nameInput, setNameInput] = useState('');
    const [photoUploaded, setPhotoUploaded] = useState(false);
 
+   localStorage.setItem('name', nameInput);
    const photoUploadHandler = (e) => {
       const file = e.target.files[0];
       const reader = new FileReader();
@@ -35,7 +36,6 @@ const SignUp = () => {
       };
    }, []);
 
-   localStorage.setItem('name', nameInput);
    const clearLocalStorage = () => {
       if (!nameInput || !photoUploaded) {
          localStorage.clear();
@@ -58,12 +58,13 @@ const SignUp = () => {
    const isSubmitDisabled = !nameInput || !photoUploaded;
    return (
       <form className={classes.form} onSubmit={handleSubmit}>
-         <h3>Get Started</h3>
-         <h2>add a photo</h2>
+         <h3 className={classes.h3}>Get Started</h3>
+         <h2 className={classes.h2}>add a photo</h2>
          <div></div>
          <div className={classes.circle}>
             <label htmlFor="imgLabel">
                <img
+                  className={classes.img}
                   style={{ cursor: 'pointer' }}
                   src={photoUrl || Photo}
                   alt="upload_icon"
@@ -78,7 +79,7 @@ const SignUp = () => {
                id="imgLabel"
             />
          </div>
-         <h4>fill in your name</h4>
+         <h4 className={classes.h4}>fill in your name</h4>
          <input
             onChange={handleNameInputChange}
             placeholder="your name"
@@ -96,7 +97,7 @@ const SignUp = () => {
             }`}
             onClick={(e) => isSubmitDisabled && e.preventDefault()}
          >
-            <p>Sign In</p>
+            <p className={classes.p}>Sign In</p>
          </Link>
       </form>
    );

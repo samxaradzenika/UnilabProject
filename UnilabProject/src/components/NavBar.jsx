@@ -6,8 +6,8 @@ const NavBar = (props) => {
    const userName = localStorage.getItem('name');
    return (
       <div className={classes.navbar}>
-         <h1>TO DO</h1>
-         <span>{userName}</span>
+         <h1 className={classes.h1}>TO DO</h1>
+         <span className={classes.span}>{userName}</span>
          <div className={classes.imgwraper}>
             <img
                src={userPhotoUrl}
