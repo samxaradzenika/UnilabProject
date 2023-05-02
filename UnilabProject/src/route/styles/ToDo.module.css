@@ -1,14 +1,21 @@
+body {
+   overflow-x: hidden;
+}
+
 .form {
    width: 100%;
    display: flex;
    margin-top: 133px;
 }
+
 div {
    background-color: white;
 }
+
 h1 {
    color: rgb(145, 118, 118);
 }
+
 .list {
    display: flex;
    justify-content: center;
