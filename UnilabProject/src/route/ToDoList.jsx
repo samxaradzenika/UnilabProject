@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import classes from './styles/ToDo.module.css';
+import classes from '../styles/ToDoList.module.css';
 import ToDoItem from '../components/ToDoItem';
 import NavBar from '../components/navBar';
 
@@ -19,6 +18,8 @@ const ToDoList = () => {
    useEffect(() => {
       localStorage.setItem('tasks', JSON.stringify(tasks));
    }, [tasks]);
+
+   const [completedTasks, setCompletedTasks] = useState(new Set());
 
    if (isToDoList) {
       document.getElementsByTagName('body')[0].style.backgroundColor = 'white';
@@ -38,10 +39,22 @@ const ToDoList = () => {
 
    const handleDelete = (id) => {
       setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+      setCompletedTasks((prevCompletedTasks) => {
+         prevCompletedTasks.delete(id); // remove the id from completedTasks set if the task is deleted
+         return prevCompletedTasks;
+      });
    };
 
    const handleDone = (id) => {
-      setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+      setTasks((prevTasks) => {
+         return prevTasks.map((task) => {
+            if (task.id === id) {
+               return { ...task, completed: !task.completed };
+            } else {
+               return task;
+            }
+         });
+      });
    };
 
    return (
@@ -70,6 +83,7 @@ const ToDoList = () => {
                         text={task.text}
                         onDelete={handleDelete}
                         onDone={handleDone}
+                        completedTasks={completedTasks}
                      />
                   ))}
                </ul>

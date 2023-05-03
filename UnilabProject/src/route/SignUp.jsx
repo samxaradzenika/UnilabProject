@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import classes from './styles/SignUp.module.css';
+import classes from '../styles/SignUp.module.css';
 import Photo from '../../assets/pics/Camera.svg';
 
 const SignUp = () => {

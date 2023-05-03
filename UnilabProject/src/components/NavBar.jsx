@@ -1,5 +1,6 @@
 import React from 'react';
-import classes from '../route/styles/NavBar.module.css';
+import classes from '../styles/NavBar.module.css';
+
 
 const NavBar = (props) => {
    const userPhotoUrl = localStorage.getItem('photo');

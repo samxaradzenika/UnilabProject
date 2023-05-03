@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import classes from './styles/Home.module.css';
+import classes from '../styles/Home.module.css';
 const Home = () => {
    return (
       <div className={classes.div} style={{ backgroundColor: 'black' }}>
