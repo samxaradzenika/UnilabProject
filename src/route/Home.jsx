@@ -6,7 +6,7 @@ const Home = () => {
    }
    return (
       <div className={classes.div} style={{ backgroundColor: 'black' }}>
-         <img src="../assets/pics/Todo icon.svg" alt="todo" />
+         <img src="../../assets/pics/Todo icon.svg" alt="todo" />
          <h1 className={classes.h1}>Keep Track Of Daily Tasks In Life</h1>
          <Link className={classes.sign} to="/signup">
             Get Started

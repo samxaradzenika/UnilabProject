@@ -1,8 +1,9 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import classes from '../styles/ToDoList.module.css';
 import ToDoItem from '../components/ToDoItem';
-import NavBar from '../components/navBar';
+import NavBar from '../components/NavBar';
 
 const ToDoList = () => {
    if (!localStorage.getItem('isAuth')) {
