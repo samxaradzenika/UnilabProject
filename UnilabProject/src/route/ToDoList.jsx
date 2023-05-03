@@ -36,6 +36,14 @@ const ToDoList = () => {
       }
    };
 
+   const handleDelete = (id) => {
+      setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+   };
+
+   const handleDone = (id) => {
+      setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+   };
+
    return (
       <React.Fragment>
          <NavBar />
@@ -56,7 +64,13 @@ const ToDoList = () => {
             <div className={classes.list}>
                <ul>
                   {tasks.map((task) => (
-                     <ToDoItem key={task.id} text={task.text} />
+                     <ToDoItem
+                        key={task.id}
+                        id={task.id}
+                        text={task.text}
+                        onDelete={handleDelete}
+                        onDone={handleDone}
+                     />
                   ))}
                </ul>
             </div>

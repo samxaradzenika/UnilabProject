@@ -66,6 +66,6 @@ body {
    text-align: center;
    margin-bottom: 27px;
 }
-li:nth-child(n + 2) {
+ul div:nth-child(n + 2) {
    margin-top: 16px;
 }

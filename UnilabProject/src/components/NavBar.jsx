@@ -7,13 +7,15 @@ const NavBar = (props) => {
    return (
       <div className={classes.navbar}>
          <h1 className={classes.h1}>TO DO</h1>
-         <span className={classes.span}>{userName}</span>
-         <div className={classes.imgwraper}>
-            <img
-               src={userPhotoUrl}
-               alt="user photo"
-               className={classes.image}
-            />
+         <div className={classes.userwraper}>
+            <span className={classes.span}>{userName}</span>
+            <div className={classes.imgwraper}>
+               <img
+                  src={userPhotoUrl}
+                  alt="user photo"
+                  className={classes.image}
+               />
+            </div>
          </div>
       </div>
    );
