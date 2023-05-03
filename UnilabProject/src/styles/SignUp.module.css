@@ -5,7 +5,7 @@
    transform: translate(-50%, 0);
    width: 90%;
    max-width: 588px;
-   height: 80vh;
+   height: 686px;
    background-color: white;
    display: flex;
    justify-content: center;
@@ -15,8 +15,9 @@
 }
 
 .h3 {
-   font-size: 2.5rem;
+   font-size: 48px;
    width: 80%;
+   height: 67px;
    max-width: 277px;
    color: #000000;
    text-align: center;
@@ -25,6 +26,11 @@
    letter-spacing: 0px;
    margin-top: 33px;
    margin-bottom: 44px;
+   font: normal normal 300 48px/72px Poppins;
+   letter-spacing: 0px;
+   color: #000000;
+   text-transform: capitalize;
+   opacity: 1;
 }
 
 .h2 {
@@ -38,6 +44,11 @@
    letter-spacing: 0px;
    margin-bottom: 10px;
    font-size: 22px;
+   font: normal normal 300 22px/33px Poppins;
+   letter-spacing: 0px;
+   color: #000000;
+   text-transform: lowercase;
+   opacity: 1;
 }
 
 .h4 {
@@ -49,6 +60,11 @@
    letter-spacing: 0px;
    margin-top: 53px;
    margin-bottom: 16px;
+   font: normal normal 300 22px/33px Poppins;
+   letter-spacing: 0px;
+   color: #000000;
+   text-transform: lowercase;
+   opacity: 1;
 }
 
 .circle {
@@ -75,10 +91,11 @@
    border: none;
    width: 80%;
    max-width: 487px;
-   height: 10vh;
+   height: 76px;
    margin-bottom: 76px;
-   font-size: 2rem;
+   font-size: 22px;
    text-align: center;
+   padding-left: 22px;
 }
 
 .signinbtn {
@@ -94,13 +111,25 @@
 }
 
 .p {
-   font-size: 2.5rem;
+   font-size: 32px;
    color: black;
+   text-align: left;
+   font: normal normal 300 32px/48px Poppins;
+   letter-spacing: 0px;
+   color: #000000;
+   text-transform: capitalize;
+   opacity: 1;
 }
 
-input[type='text'] {
-   text-align: center;
-   font-size: 2rem;
+.nameinput[type='text'] {
+   text-align: left;
+   font: normal normal 300 22px/33px Poppins;
+   letter-spacing: 0px;
+   color: #000000;
+   text-transform: lowercase;
+   opacity: 1;
+   font-size: 22px;
+   border: none;
 }
 
 @media only screen and (max-width: 768px) {

@@ -59,6 +59,11 @@
 
 .div h1 {
    color: white;
+   font: normal normal 600 54px/81px Poppins;
+   letter-spacing: 0px;
+   color: #ffffff;
+   text-transform: capitalize;
+   opacity: 1;
 }
 
 .sign {
@@ -73,6 +78,11 @@
    cursor: pointer;
    text-decoration: none;
    transition: all 0.3s ease;
+   font: normal normal 300 48px/72px Poppins;
+   letter-spacing: 0px;
+   color: #000000;
+   text-transform: capitalize;
+   opacity: 1;
 }
 
 .sign:hover {

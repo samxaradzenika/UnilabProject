@@ -18,6 +18,11 @@
    font-weight: bold;
    color: #ffffff;
    margin: 0;
+   font: normal normal 900 36px/55px Poppins;
+   letter-spacing: 0px;
+   color: #ffffff;
+   text-transform: uppercase;
+   opacity: 1;
 }
 
 .span {
@@ -25,6 +30,11 @@
    font-size: 20px;
    font-weight: bold;
    color: #ffffff;
+   font: normal normal 300 22px/33px Poppins;
+   letter-spacing: 0px;
+   color: #ffffff;
+   text-transform: capitalize;
+   opacity: 1;
 }
 
 .imgwraper {

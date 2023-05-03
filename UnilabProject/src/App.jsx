@@ -8,8 +8,6 @@ import { Navigate } from 'react-router-dom';
 
 const App = () => {
    const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
-
-   const protectedHome = () => {};
    const ProtectLoginRoute = () => {
       if (isAuth) {
          return <Navigate to="/todo" />;

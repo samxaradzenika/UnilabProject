@@ -30,14 +30,17 @@ body {
 .input {
    border: 2px solid #ddd;
    border-radius: 4px;
-   max-width: 487px;
-   height: 76px;
+   padding-left: 24px;
    font-size: 22px;
-   text-align: start;
-   background: #e6ebff 0% 0% no-repeat padding-box;
-   border-radius: 4px;
+   width: 487px;
+   height: 76px;
+   color: var(--unnamed-color-ffffff);
+   text-align: left;
+   font: normal normal 300 22px/33px Poppins;
+   letter-spacing: 0px;
+   color: #ffffff;
+   text-transform: capitalize;
    opacity: 1;
-   border: none;
 }
 
 .button {
@@ -57,6 +60,11 @@ body {
    height: 45px;
    font-size: 32px;
    padding: 16px, 22, 15px, 22px;
+   font: normal normal 300 32px/48px Poppins;
+   letter-spacing: 0px;
+   color: #000000;
+   text-transform: capitalize;
+   opacity: 1;
 }
 .h2 {
    color: rgb(0, 0, 0);
