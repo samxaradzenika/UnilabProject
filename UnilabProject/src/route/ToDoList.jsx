@@ -5,6 +5,9 @@ import ToDoItem from '../components/ToDoItem';
 import NavBar from '../components/navBar';
 
 const ToDoList = () => {
+   if (!localStorage.getItem('isAuth')) {
+      window.location.href = '/';
+   }
    const [tasks, setTasks] = useState(() => {
       const storedTasks = localStorage.getItem('tasks');
       return storedTasks ? JSON.parse(storedTasks) : [];
@@ -40,7 +43,7 @@ const ToDoList = () => {
    const handleDelete = (id) => {
       setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
       setCompletedTasks((prevCompletedTasks) => {
-         prevCompletedTasks.delete(id); // remove the id from completedTasks set if the task is deleted
+         prevCompletedTasks.delete(id);
          return prevCompletedTasks;
       });
    };

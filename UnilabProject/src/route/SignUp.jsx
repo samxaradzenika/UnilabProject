@@ -4,6 +4,9 @@ import classes from '../styles/SignUp.module.css';
 import Photo from '../../assets/pics/Camera.svg';
 
 const SignUp = () => {
+   if(localStorage.getItem('isAuth')){
+      window.location.href = '/todo';0
+   }
    const [photoUrl, setPhotoUrl] = useState(
       localStorage.getItem('photo') || ''
    );
@@ -56,6 +59,11 @@ const SignUp = () => {
    };
 
    const isSubmitDisabled = !nameInput || !photoUploaded;
+
+   const login = () => {
+      isSubmitDisabled && e.preventDefault();
+      localStorage.setItem('isAuth', true);
+   };
    return (
       <form className={classes.form} onSubmit={handleSubmit}>
          <h3 className={classes.h3}>Get Started</h3>
@@ -95,7 +103,7 @@ const SignUp = () => {
             className={`${classes.signinbtn} ${
                isSubmitDisabled ? classes.disabled : ''
             }`}
-            onClick={(e) => isSubmitDisabled && e.preventDefault()}
+            onClick={login}
          >
             <p className={classes.p}>Sign In</p>
          </Link>
