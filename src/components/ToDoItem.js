@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import classes from '../styles/ToDoItem.module.css';
 import Done from '../../assets/pics/done.svg';
 import Delete from '../../assets/pics/delete.svg';
