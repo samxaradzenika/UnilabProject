@@ -4,8 +4,9 @@ import classes from '../styles/SignUp.module.css';
 import Photo from '../../assets/pics/Camera.svg';
 
 const SignUp = () => {
-   if(localStorage.getItem('isAuth')){
-      window.location.href = '/todo';0
+   if (localStorage.getItem('isAuth')) {
+      window.location.href = '/todo';
+      0;
    }
    const [photoUrl, setPhotoUrl] = useState(
       localStorage.getItem('photo') || ''
@@ -105,7 +106,7 @@ const SignUp = () => {
             }`}
             onClick={login}
          >
-            <p className={classes.p}>Sign In</p>
+            Sign In
          </Link>
       </form>
    );

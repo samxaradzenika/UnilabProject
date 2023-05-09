@@ -7,6 +7,7 @@
    width: 595px;
    height: 54px;
    margin-top: 16px;
+   border-radius: 4px;
 }
 .task {
    text-transform: capitalize;
@@ -38,6 +39,7 @@
    height: 54px;
    margin-left: 6px;
    margin-right: 27.33px;
+   cursor: pointer;
 }
 .donebtn {
    display: flex;
@@ -49,6 +51,7 @@
    padding-left: 12px;
    width: 48px;
    height: 54px;
+   cursor: pointer;
 }
 .deletebtn:hover {
    background: #fc5e5e 0% 0% no-repeat padding-box;

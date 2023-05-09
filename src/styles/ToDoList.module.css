@@ -42,6 +42,9 @@ body {
    text-transform: capitalize;
    opacity: 1;
 }
+input:focus {
+   outline: none;
+}
 
 .button {
    max-width: 108px;
@@ -54,6 +57,7 @@ body {
    justify-content: center;
    align-items: center;
    flex-direction: row;
+   cursor: pointer;
 }
 .btntxt {
    width: 64px;
